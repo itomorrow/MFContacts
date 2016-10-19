@@ -1,140 +1,38 @@
-MFContact
+MFContacts
 ==============
 
+[![Build Status](https://api.travis-ci.org/Alterplay/APAddressBook.svg)](https://travis-ci.org/Alterplay/APAddressBook)
 [![License MIT](https://img.shields.io/badge/license-MIT-green.svg?style=flat)](https://raw.githubusercontent.com/chenliming777/LFLiveKit/master/LICENSE)&nbsp;
 [![Support](https://img.shields.io/badge/ios-7-orange.svg)](https://www.apple.com/nl/ios/)&nbsp;
 ![platform](https://img.shields.io/badge/platform-ios-ff69b4.svg)&nbsp;
 
+MFContact is a wrapper both on [AddressBook.framework](https://developer.apple.com/library/ios/documentation/AddressBook/Reference/AddressBook_iPhoneOS_Framework/_index.html) and [Contacts.framework]() that gives the same APIs accross two framework and easy way to access the native address book.
 
-**MFContact is a opensource Contact operation kit for iOS.**  
+#### Features
+* Load、modify、delete contacts from iOS address book asynchronously
+* Decide what contact data fields you need to read (for example, only name and phone number)
+* Sort contacts with array of any [NSSortDescriptor](https://developer.apple.com/library/mac/documentation/cocoa/reference/foundation/classes/NSSortDescriptor_Class/Reference/Reference.html)
 
-## Features
+**Installation**
 
-- [x] 	Support both Contacts framework and AddressBook framework
-- [x] 	Support contact infomation read、modify、write。
-- [x] 	Contact changed notification
-- [x]  Thread safed
-- [x] 	Drop frames on bad network 
-- [x] 	Dynamic switching rate
-- [x] 	Audio configuration
-- [x] 	Video configuration
-- [x] 	RTMP Transport
-- [x] 	Switch camera position
-- [x] 	Audio Mute
-- [x] 	Support Send Buffer
-- [x] 	Support WaterMark
-- [x] 	Swift Support
-- [x] 	Support Single Video or Audio 
-- [x] 	Support External input video or audio(Screen recording or Peripheral)
-- [ ] 	~~FLV package and send~~
-
-## Requirements
-    - iOS 7.0+
-    - Xcode 7.3
-  
-## Installation
-
-#### CocoaPods
-	# To integrate LFLiveKit into your Xcode project using CocoaPods, specify it in your Podfile:
-
-	source 'https://github.com/CocoaPods/Specs.git'
-	platform :ios, '7.0'
-	pod 'LFLiveKit'
-	
-	# Then, run the following command:
-	$ pod install
-
-
-#### Carthage
-    1. Add `github "LaiFengiOS/LFLiveKit"` to your Cartfile.
-    2. Run `carthage update --platform ios` and add the framework to your project.
-    3. Import \<LFLiveKit/LFLiveKit.h\>.
-
-
-#### Manually
-
-    1. Download all the files in the `LFLiveKit` subdirectory.
+    1. Download all the files in the `MFContacts` subdirectory.
     2. Add the source files to your Xcode project.
-    3. Link with required frameworks:
-        * UIKit
-        * Foundation
-        * AVFoundation
-        * VideoToolbox
-        * AudioToolbox
-        * libz
-        * libstdc++
-	
-## Usage example 
+    3. In iOS 10.0 and after you need include the `NSContactsUsageDescription` key in your app’s `Info.plist` file and provide a purpose string for this key.
 
-#### Objective-C
-```objc
-- (LFLiveSession*)session {
-	if (!_session) {
-	    _session = [[LFLiveSession alloc] initWithAudioConfiguration:[LFLiveAudioConfiguration defaultConfiguration] videoConfiguration:[LFLiveVideoConfiguration defaultConfiguration]];
-	    _session.preView = self;
-	    _session.delegate = self;
-	}
-	return _session;
-}
+**Read contacts**  
 
-- (void)startLive {	
-	LFLiveStreamInfo *streamInfo = [LFLiveStreamInfo new];
-	streamInfo.url = @"your server rtmp url";
-	[self.session startLive:streamInfo];
-}
-
-- (void)stopLive {
-	[self.session stopLive];
-}
-
-//MARK: - CallBack:
-- (void)liveSession:(nullable LFLiveSession *)session liveStateDidChange: (LFLiveState)state;
-- (void)liveSession:(nullable LFLiveSession *)session debugInfo:(nullable LFLiveDebug*)debugInfo;
-- (void)liveSession:(nullable LFLiveSession*)session errorCode:(LFLiveSocketErrorCode)errorCode;
-```
-#### Swift
-```swift
-// import LFLiveKit in [ProjectName]-Bridging-Header.h
-#import <LFLiveKit.h> 
-
-//MARK: - Getters and Setters
-lazy var session: LFLiveSession = {
-	let audioConfiguration = LFLiveAudioConfiguration.defaultConfiguration()
-	let videoConfiguration = LFLiveVideoConfiguration.defaultConfigurationForQuality(LFLiveVideoQuality.Low3, landscape: false)
-	let session = LFLiveSession(audioConfiguration: audioConfiguration, videoConfiguration: videoConfiguration)
-	    
-	session?.delegate = self
-	session?.preView = self.view
-	return session!
-}()
-
-//MARK: - Event
-func startLive() -> Void { 
-	let stream = LFLiveStreamInfo()
-	stream.url = "your server rtmp url";
-	session.startLive(stream)
-}
-
-func stopLive() -> Void {
-	session.stopLive()
-}
-
-//MARK: - Callback
-func liveSession(session: LFLiveSession?, debugInfo: LFLiveDebug?) 
-func liveSession(session: LFLiveSession?, errorCode: LFLiveSocketErrorCode)
-func liveSession(session: LFLiveSession?, liveStateDidChange state: LFLiveState)
-```
-
-## Release History
-    * 2.0.0
-        * CHANGE: modify bugs,support ios7 live.
-    * 2.2.4.3
-        * CHANGE: modify bugs,support swift import.
+	__weak __typeof(self) weakSelf = self;
+	[[MFContactsManager shareManager] readContacts:^(NSArray<MFContact *> *contacts, NSError *error) {
+	   if (contacts){
+	       [weakSelf.contacts removeAllObjects];
+	       [weakSelf.contacts addObjectsFromArray:contacts];
+	       [weakSelf.tableView reloadData];
+	       NSLog(@"load contact success!");
+	   } else if (error) {
+	       NSLog(@"load contact failed!");
+	   }
+	}];
 
 
-## License
- **LFLiveKit is released under the MIT license. See LICENSE for details.**
-
-
-
+> Callback block will be run on main queue! If you need to run callback block on custom queue use `readContactsOnQueue:completion:` method
 
