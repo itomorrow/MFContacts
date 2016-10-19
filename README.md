@@ -6,7 +6,7 @@ MFContacts
 [![Support](https://img.shields.io/badge/ios-7-orange.svg)](https://www.apple.com/nl/ios/)&nbsp;
 ![platform](https://img.shields.io/badge/platform-ios-ff69b4.svg)&nbsp;
 
-MFContact is a wrapper both on [AddressBook.framework](https://developer.apple.com/library/ios/documentation/AddressBook/Reference/AddressBook_iPhoneOS_Framework/_index.html) and [Contacts.framework]() that gives the same APIs accross two framework and easy way to access the native address book.
+MFContacts is a wrapper both on [AddressBook.framework](https://developer.apple.com/library/ios/documentation/AddressBook/Reference/AddressBook_iPhoneOS_Framework/_index.html) and [Contacts.framework](https://developer.apple.com/reference/contacts) that gives the same APIs accross two framework and easy way to access the native address book.
 
 #### Features
 * Load、modify、delete contacts from iOS address book asynchronously

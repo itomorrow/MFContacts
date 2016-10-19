@@ -26,6 +26,7 @@
     
     [[MFContactsManager shareManager] startObserveChangesWithCallback:^{
         NSLog(@"contacts has changed");
+        [self loadContacts];
     }];
     
     [self loadContacts];
