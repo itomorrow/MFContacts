@@ -171,7 +171,7 @@
     
     if (editingStyle == UITableViewCellEditingStyleDelete) {
         
-        MFContact* contact = [self.addresses objectAtIndex:indexPath.row];
+        MFContact* contact = [self.contacts objectAtIndex:indexPath.row];
         [[MFContactsManager shareManager] removeContactByIdentifier:contact.identifier completion:^(NSError * _Nullable error) {
             NSLog(@"removed!");
         }];
@@ -197,7 +197,7 @@
     return _tableView;
 }
 
-- (NSMutableArray *)addresses{
+- (NSMutableArray *)contacts{
     if (!_contacts) {
         _contacts = [[NSMutableArray alloc] init];
     }
