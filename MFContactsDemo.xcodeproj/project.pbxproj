@@ -1,0 +1,451 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		93E68B571DB4B9F200A0FBEF /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 93E68B561DB4B9F200A0FBEF /* main.m */; };
+		93E68B5A1DB4B9F200A0FBEF /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 93E68B591DB4B9F200A0FBEF /* AppDelegate.m */; };
+		93E68B5C1DB4B9F200A0FBEF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 93E68B5B1DB4B9F200A0FBEF /* Assets.xcassets */; };
+		93E68B5F1DB4B9F200A0FBEF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 93E68B5D1DB4B9F200A0FBEF /* LaunchScreen.storyboard */; };
+		93E68B681DB4BA7900A0FBEF /* MFRootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 93E68B671DB4BA7900A0FBEF /* MFRootViewController.m */; };
+		93E68BB81DB7697B00A0FBEF /* MFContactsManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 93E68BB21DB7697B00A0FBEF /* MFContactsManager.m */; };
+		93E68BB91DB7697B00A0FBEF /* MFContactsModels.m in Sources */ = {isa = PBXBuildFile; fileRef = 93E68BB41DB7697B00A0FBEF /* MFContactsModels.m */; };
+		93E68BBA1DB7697B00A0FBEF /* MFThread.m in Sources */ = {isa = PBXBuildFile; fileRef = 93E68BB61DB7697B00A0FBEF /* MFThread.m */; };
+		93E68BCB1DB7698800A0FBEF /* MFAddressBookAccessRoutine.m in Sources */ = {isa = PBXBuildFile; fileRef = 93E68BBC1DB7698800A0FBEF /* MFAddressBookAccessRoutine.m */; };
+		93E68BCC1DB7698800A0FBEF /* MFAddressBookBaseRoutine.m in Sources */ = {isa = PBXBuildFile; fileRef = 93E68BBE1DB7698800A0FBEF /* MFAddressBookBaseRoutine.m */; };
+		93E68BCD1DB7698800A0FBEF /* MFAddressBookBuilder.m in Sources */ = {isa = PBXBuildFile; fileRef = 93E68BC01DB7698800A0FBEF /* MFAddressBookBuilder.m */; };
+		93E68BCE1DB7698800A0FBEF /* MFAddressBookChangeRoutine.m in Sources */ = {isa = PBXBuildFile; fileRef = 93E68BC21DB7698800A0FBEF /* MFAddressBookChangeRoutine.m */; };
+		93E68BCF1DB7698800A0FBEF /* MFAddressBookContactsRoutine.m in Sources */ = {isa = PBXBuildFile; fileRef = 93E68BC41DB7698800A0FBEF /* MFAddressBookContactsRoutine.m */; };
+		93E68BD01DB7698800A0FBEF /* MFAddressBookDataComposer.m in Sources */ = {isa = PBXBuildFile; fileRef = 93E68BC61DB7698800A0FBEF /* MFAddressBookDataComposer.m */; };
+		93E68BD11DB7698800A0FBEF /* MFAddressBookDataExtractor.m in Sources */ = {isa = PBXBuildFile; fileRef = 93E68BC81DB7698800A0FBEF /* MFAddressBookDataExtractor.m */; };
+		93E68BD21DB7698800A0FBEF /* MFAddressBookHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 93E68BCA1DB7698800A0FBEF /* MFAddressBookHelper.m */; };
+		93E68BE31DB7699C00A0FBEF /* MFContactBuilder.m in Sources */ = {isa = PBXBuildFile; fileRef = 93E68BD41DB7699C00A0FBEF /* MFContactBuilder.m */; };
+		93E68BE41DB7699C00A0FBEF /* MFContactDataComposer.m in Sources */ = {isa = PBXBuildFile; fileRef = 93E68BD61DB7699C00A0FBEF /* MFContactDataComposer.m */; };
+		93E68BE51DB7699C00A0FBEF /* MFContactDataExtractor.m in Sources */ = {isa = PBXBuildFile; fileRef = 93E68BD81DB7699C00A0FBEF /* MFContactDataExtractor.m */; };
+		93E68BE61DB7699C00A0FBEF /* MFContactsAccessRoutine.m in Sources */ = {isa = PBXBuildFile; fileRef = 93E68BDA1DB7699C00A0FBEF /* MFContactsAccessRoutine.m */; };
+		93E68BE71DB7699C00A0FBEF /* MFContactsBaseRoutine.m in Sources */ = {isa = PBXBuildFile; fileRef = 93E68BDC1DB7699C00A0FBEF /* MFContactsBaseRoutine.m */; };
+		93E68BE81DB7699C00A0FBEF /* MFContactsChangeRoutine.m in Sources */ = {isa = PBXBuildFile; fileRef = 93E68BDE1DB7699C00A0FBEF /* MFContactsChangeRoutine.m */; };
+		93E68BE91DB7699C00A0FBEF /* MFContactsHelper.m in Sources */ = {isa = PBXBuildFile; fileRef = 93E68BE01DB7699C00A0FBEF /* MFContactsHelper.m */; };
+		93E68BEA1DB7699C00A0FBEF /* MFContactsStoreRoutine.m in Sources */ = {isa = PBXBuildFile; fileRef = 93E68BE21DB7699C00A0FBEF /* MFContactsStoreRoutine.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		93E68B521DB4B9F200A0FBEF /* MFContactsDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MFContactsDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		93E68B561DB4B9F200A0FBEF /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		93E68B581DB4B9F200A0FBEF /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; lineEnding = 0; path = AppDelegate.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
+		93E68B591DB4B9F200A0FBEF /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = AppDelegate.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
+		93E68B5B1DB4B9F200A0FBEF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		93E68B5E1DB4B9F200A0FBEF /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		93E68B601DB4B9F200A0FBEF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		93E68B661DB4BA7900A0FBEF /* MFRootViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MFRootViewController.h; sourceTree = "<group>"; };
+		93E68B671DB4BA7900A0FBEF /* MFRootViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MFRootViewController.m; sourceTree = "<group>"; };
+		93E68BB01DB7697B00A0FBEF /* MFContactsHelperProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MFContactsHelperProtocol.h; path = MFContacts/MFContactsHelperProtocol.h; sourceTree = SOURCE_ROOT; };
+		93E68BB11DB7697B00A0FBEF /* MFContactsManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MFContactsManager.h; path = MFContacts/MFContactsManager.h; sourceTree = SOURCE_ROOT; };
+		93E68BB21DB7697B00A0FBEF /* MFContactsManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MFContactsManager.m; path = MFContacts/MFContactsManager.m; sourceTree = SOURCE_ROOT; };
+		93E68BB31DB7697B00A0FBEF /* MFContactsModels.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MFContactsModels.h; path = MFContacts/MFContactsModels.h; sourceTree = SOURCE_ROOT; };
+		93E68BB41DB7697B00A0FBEF /* MFContactsModels.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MFContactsModels.m; path = MFContacts/MFContactsModels.m; sourceTree = SOURCE_ROOT; };
+		93E68BB51DB7697B00A0FBEF /* MFThread.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MFThread.h; path = MFContacts/MFThread.h; sourceTree = SOURCE_ROOT; };
+		93E68BB61DB7697B00A0FBEF /* MFThread.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MFThread.m; path = MFContacts/MFThread.m; sourceTree = SOURCE_ROOT; };
+		93E68BB71DB7697B00A0FBEF /* MFTypes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MFTypes.h; path = MFContacts/MFTypes.h; sourceTree = SOURCE_ROOT; };
+		93E68BBB1DB7698800A0FBEF /* MFAddressBookAccessRoutine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MFAddressBookAccessRoutine.h; path = MFContacts/AddressBookFramework/MFAddressBookAccessRoutine.h; sourceTree = SOURCE_ROOT; };
+		93E68BBC1DB7698800A0FBEF /* MFAddressBookAccessRoutine.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MFAddressBookAccessRoutine.m; path = MFContacts/AddressBookFramework/MFAddressBookAccessRoutine.m; sourceTree = SOURCE_ROOT; };
+		93E68BBD1DB7698800A0FBEF /* MFAddressBookBaseRoutine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MFAddressBookBaseRoutine.h; path = MFContacts/AddressBookFramework/MFAddressBookBaseRoutine.h; sourceTree = SOURCE_ROOT; };
+		93E68BBE1DB7698800A0FBEF /* MFAddressBookBaseRoutine.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MFAddressBookBaseRoutine.m; path = MFContacts/AddressBookFramework/MFAddressBookBaseRoutine.m; sourceTree = SOURCE_ROOT; };
+		93E68BBF1DB7698800A0FBEF /* MFAddressBookBuilder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MFAddressBookBuilder.h; path = MFContacts/AddressBookFramework/MFAddressBookBuilder.h; sourceTree = SOURCE_ROOT; };
+		93E68BC01DB7698800A0FBEF /* MFAddressBookBuilder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MFAddressBookBuilder.m; path = MFContacts/AddressBookFramework/MFAddressBookBuilder.m; sourceTree = SOURCE_ROOT; };
+		93E68BC11DB7698800A0FBEF /* MFAddressBookChangeRoutine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MFAddressBookChangeRoutine.h; path = MFContacts/AddressBookFramework/MFAddressBookChangeRoutine.h; sourceTree = SOURCE_ROOT; };
+		93E68BC21DB7698800A0FBEF /* MFAddressBookChangeRoutine.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MFAddressBookChangeRoutine.m; path = MFContacts/AddressBookFramework/MFAddressBookChangeRoutine.m; sourceTree = SOURCE_ROOT; };
+		93E68BC31DB7698800A0FBEF /* MFAddressBookContactsRoutine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MFAddressBookContactsRoutine.h; path = MFContacts/AddressBookFramework/MFAddressBookContactsRoutine.h; sourceTree = SOURCE_ROOT; };
+		93E68BC41DB7698800A0FBEF /* MFAddressBookContactsRoutine.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MFAddressBookContactsRoutine.m; path = MFContacts/AddressBookFramework/MFAddressBookContactsRoutine.m; sourceTree = SOURCE_ROOT; };
+		93E68BC51DB7698800A0FBEF /* MFAddressBookDataComposer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MFAddressBookDataComposer.h; path = MFContacts/AddressBookFramework/MFAddressBookDataComposer.h; sourceTree = SOURCE_ROOT; };
+		93E68BC61DB7698800A0FBEF /* MFAddressBookDataComposer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MFAddressBookDataComposer.m; path = MFContacts/AddressBookFramework/MFAddressBookDataComposer.m; sourceTree = SOURCE_ROOT; };
+		93E68BC71DB7698800A0FBEF /* MFAddressBookDataExtractor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MFAddressBookDataExtractor.h; path = MFContacts/AddressBookFramework/MFAddressBookDataExtractor.h; sourceTree = SOURCE_ROOT; };
+		93E68BC81DB7698800A0FBEF /* MFAddressBookDataExtractor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MFAddressBookDataExtractor.m; path = MFContacts/AddressBookFramework/MFAddressBookDataExtractor.m; sourceTree = SOURCE_ROOT; };
+		93E68BC91DB7698800A0FBEF /* MFAddressBookHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MFAddressBookHelper.h; path = MFContacts/AddressBookFramework/MFAddressBookHelper.h; sourceTree = SOURCE_ROOT; };
+		93E68BCA1DB7698800A0FBEF /* MFAddressBookHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MFAddressBookHelper.m; path = MFContacts/AddressBookFramework/MFAddressBookHelper.m; sourceTree = SOURCE_ROOT; };
+		93E68BD31DB7699C00A0FBEF /* MFContactBuilder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MFContactBuilder.h; path = MFContacts/ContactsFramework/MFContactBuilder.h; sourceTree = SOURCE_ROOT; };
+		93E68BD41DB7699C00A0FBEF /* MFContactBuilder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MFContactBuilder.m; path = MFContacts/ContactsFramework/MFContactBuilder.m; sourceTree = SOURCE_ROOT; };
+		93E68BD51DB7699C00A0FBEF /* MFContactDataComposer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MFContactDataComposer.h; path = MFContacts/ContactsFramework/MFContactDataComposer.h; sourceTree = SOURCE_ROOT; };
+		93E68BD61DB7699C00A0FBEF /* MFContactDataComposer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MFContactDataComposer.m; path = MFContacts/ContactsFramework/MFContactDataComposer.m; sourceTree = SOURCE_ROOT; };
+		93E68BD71DB7699C00A0FBEF /* MFContactDataExtractor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MFContactDataExtractor.h; path = MFContacts/ContactsFramework/MFContactDataExtractor.h; sourceTree = SOURCE_ROOT; };
+		93E68BD81DB7699C00A0FBEF /* MFContactDataExtractor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MFContactDataExtractor.m; path = MFContacts/ContactsFramework/MFContactDataExtractor.m; sourceTree = SOURCE_ROOT; };
+		93E68BD91DB7699C00A0FBEF /* MFContactsAccessRoutine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MFContactsAccessRoutine.h; path = MFContacts/ContactsFramework/MFContactsAccessRoutine.h; sourceTree = SOURCE_ROOT; };
+		93E68BDA1DB7699C00A0FBEF /* MFContactsAccessRoutine.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MFContactsAccessRoutine.m; path = MFContacts/ContactsFramework/MFContactsAccessRoutine.m; sourceTree = SOURCE_ROOT; };
+		93E68BDB1DB7699C00A0FBEF /* MFContactsBaseRoutine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MFContactsBaseRoutine.h; path = MFContacts/ContactsFramework/MFContactsBaseRoutine.h; sourceTree = SOURCE_ROOT; };
+		93E68BDC1DB7699C00A0FBEF /* MFContactsBaseRoutine.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MFContactsBaseRoutine.m; path = MFContacts/ContactsFramework/MFContactsBaseRoutine.m; sourceTree = SOURCE_ROOT; };
+		93E68BDD1DB7699C00A0FBEF /* MFContactsChangeRoutine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MFContactsChangeRoutine.h; path = MFContacts/ContactsFramework/MFContactsChangeRoutine.h; sourceTree = SOURCE_ROOT; };
+		93E68BDE1DB7699C00A0FBEF /* MFContactsChangeRoutine.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MFContactsChangeRoutine.m; path = MFContacts/ContactsFramework/MFContactsChangeRoutine.m; sourceTree = SOURCE_ROOT; };
+		93E68BDF1DB7699C00A0FBEF /* MFContactsHelper.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MFContactsHelper.h; path = MFContacts/ContactsFramework/MFContactsHelper.h; sourceTree = SOURCE_ROOT; };
+		93E68BE01DB7699C00A0FBEF /* MFContactsHelper.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MFContactsHelper.m; path = MFContacts/ContactsFramework/MFContactsHelper.m; sourceTree = SOURCE_ROOT; };
+		93E68BE11DB7699C00A0FBEF /* MFContactsStoreRoutine.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MFContactsStoreRoutine.h; path = MFContacts/ContactsFramework/MFContactsStoreRoutine.h; sourceTree = SOURCE_ROOT; };
+		93E68BE21DB7699C00A0FBEF /* MFContactsStoreRoutine.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MFContactsStoreRoutine.m; path = MFContacts/ContactsFramework/MFContactsStoreRoutine.m; sourceTree = SOURCE_ROOT; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		93E68B4F1DB4B9F200A0FBEF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		93E68B491DB4B9F200A0FBEF = {
+			isa = PBXGroup;
+			children = (
+				93E68B541DB4B9F200A0FBEF /* MFContactsDemo */,
+				93E68B531DB4B9F200A0FBEF /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		93E68B531DB4B9F200A0FBEF /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				93E68B521DB4B9F200A0FBEF /* MFContactsDemo.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		93E68B541DB4B9F200A0FBEF /* MFContactsDemo */ = {
+			isa = PBXGroup;
+			children = (
+				93E68B691DB4BE4900A0FBEF /* MFContacts */,
+				93E68B661DB4BA7900A0FBEF /* MFRootViewController.h */,
+				93E68B671DB4BA7900A0FBEF /* MFRootViewController.m */,
+				93E68B581DB4B9F200A0FBEF /* AppDelegate.h */,
+				93E68B591DB4B9F200A0FBEF /* AppDelegate.m */,
+				93E68B551DB4B9F200A0FBEF /* Supporting Files */,
+			);
+			path = MFContactsDemo;
+			sourceTree = "<group>";
+		};
+		93E68B551DB4B9F200A0FBEF /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				93E68B5B1DB4B9F200A0FBEF /* Assets.xcassets */,
+				93E68B5D1DB4B9F200A0FBEF /* LaunchScreen.storyboard */,
+				93E68B601DB4B9F200A0FBEF /* Info.plist */,
+				93E68B561DB4B9F200A0FBEF /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		93E68B691DB4BE4900A0FBEF /* MFContacts */ = {
+			isa = PBXGroup;
+			children = (
+				93E68BB71DB7697B00A0FBEF /* MFTypes.h */,
+				93E68BB51DB7697B00A0FBEF /* MFThread.h */,
+				93E68BB61DB7697B00A0FBEF /* MFThread.m */,
+				93E68BB31DB7697B00A0FBEF /* MFContactsModels.h */,
+				93E68BB41DB7697B00A0FBEF /* MFContactsModels.m */,
+				93E68BB11DB7697B00A0FBEF /* MFContactsManager.h */,
+				93E68BB21DB7697B00A0FBEF /* MFContactsManager.m */,
+				93E68BB01DB7697B00A0FBEF /* MFContactsHelperProtocol.h */,
+				93E68B6A1DB4BE4900A0FBEF /* AddressBookFramework */,
+				93E68B831DB4BE4900A0FBEF /* ContactsFramework */,
+			);
+			name = MFContacts;
+			path = MFContactsHelper;
+			sourceTree = "<group>";
+		};
+		93E68B6A1DB4BE4900A0FBEF /* AddressBookFramework */ = {
+			isa = PBXGroup;
+			children = (
+				93E68BC91DB7698800A0FBEF /* MFAddressBookHelper.h */,
+				93E68BCA1DB7698800A0FBEF /* MFAddressBookHelper.m */,
+				93E68BBD1DB7698800A0FBEF /* MFAddressBookBaseRoutine.h */,
+				93E68BBE1DB7698800A0FBEF /* MFAddressBookBaseRoutine.m */,
+				93E68BC11DB7698800A0FBEF /* MFAddressBookChangeRoutine.h */,
+				93E68BC21DB7698800A0FBEF /* MFAddressBookChangeRoutine.m */,
+				93E68BC31DB7698800A0FBEF /* MFAddressBookContactsRoutine.h */,
+				93E68BC41DB7698800A0FBEF /* MFAddressBookContactsRoutine.m */,
+				93E68BBB1DB7698800A0FBEF /* MFAddressBookAccessRoutine.h */,
+				93E68BBC1DB7698800A0FBEF /* MFAddressBookAccessRoutine.m */,
+				93E68BBF1DB7698800A0FBEF /* MFAddressBookBuilder.h */,
+				93E68BC01DB7698800A0FBEF /* MFAddressBookBuilder.m */,
+				93E68BC51DB7698800A0FBEF /* MFAddressBookDataComposer.h */,
+				93E68BC61DB7698800A0FBEF /* MFAddressBookDataComposer.m */,
+				93E68BC71DB7698800A0FBEF /* MFAddressBookDataExtractor.h */,
+				93E68BC81DB7698800A0FBEF /* MFAddressBookDataExtractor.m */,
+			);
+			path = AddressBookFramework;
+			sourceTree = "<group>";
+		};
+		93E68B831DB4BE4900A0FBEF /* ContactsFramework */ = {
+			isa = PBXGroup;
+			children = (
+				93E68BDF1DB7699C00A0FBEF /* MFContactsHelper.h */,
+				93E68BE01DB7699C00A0FBEF /* MFContactsHelper.m */,
+				93E68BDB1DB7699C00A0FBEF /* MFContactsBaseRoutine.h */,
+				93E68BDC1DB7699C00A0FBEF /* MFContactsBaseRoutine.m */,
+				93E68BD91DB7699C00A0FBEF /* MFContactsAccessRoutine.h */,
+				93E68BDA1DB7699C00A0FBEF /* MFContactsAccessRoutine.m */,
+				93E68BDD1DB7699C00A0FBEF /* MFContactsChangeRoutine.h */,
+				93E68BDE1DB7699C00A0FBEF /* MFContactsChangeRoutine.m */,
+				93E68BE11DB7699C00A0FBEF /* MFContactsStoreRoutine.h */,
+				93E68BE21DB7699C00A0FBEF /* MFContactsStoreRoutine.m */,
+				93E68BD31DB7699C00A0FBEF /* MFContactBuilder.h */,
+				93E68BD41DB7699C00A0FBEF /* MFContactBuilder.m */,
+				93E68BD51DB7699C00A0FBEF /* MFContactDataComposer.h */,
+				93E68BD61DB7699C00A0FBEF /* MFContactDataComposer.m */,
+				93E68BD71DB7699C00A0FBEF /* MFContactDataExtractor.h */,
+				93E68BD81DB7699C00A0FBEF /* MFContactDataExtractor.m */,
+			);
+			path = ContactsFramework;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		93E68B511DB4B9F200A0FBEF /* MFContactsDemo */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 93E68B631DB4B9F200A0FBEF /* Build configuration list for PBXNativeTarget "MFContactsDemo" */;
+			buildPhases = (
+				93E68B4E1DB4B9F200A0FBEF /* Sources */,
+				93E68B4F1DB4B9F200A0FBEF /* Frameworks */,
+				93E68B501DB4B9F200A0FBEF /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = MFContactsDemo;
+			productName = MFContactsDemo;
+			productReference = 93E68B521DB4B9F200A0FBEF /* MFContactsDemo.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		93E68B4A1DB4B9F200A0FBEF /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0800;
+				ORGANIZATIONNAME = Mason;
+				TargetAttributes = {
+					93E68B511DB4B9F200A0FBEF = {
+						CreatedOnToolsVersion = 8.0;
+						DevelopmentTeam = 8CCM9ZW328;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = 93E68B4D1DB4B9F200A0FBEF /* Build configuration list for PBXProject "MFContactsDemo" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 93E68B491DB4B9F200A0FBEF;
+			productRefGroup = 93E68B531DB4B9F200A0FBEF /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				93E68B511DB4B9F200A0FBEF /* MFContactsDemo */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		93E68B501DB4B9F200A0FBEF /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				93E68B5C1DB4B9F200A0FBEF /* Assets.xcassets in Resources */,
+				93E68B5F1DB4B9F200A0FBEF /* LaunchScreen.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		93E68B4E1DB4B9F200A0FBEF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				93E68BCD1DB7698800A0FBEF /* MFAddressBookBuilder.m in Sources */,
+				93E68BD01DB7698800A0FBEF /* MFAddressBookDataComposer.m in Sources */,
+				93E68BE91DB7699C00A0FBEF /* MFContactsHelper.m in Sources */,
+				93E68BE31DB7699C00A0FBEF /* MFContactBuilder.m in Sources */,
+				93E68BE41DB7699C00A0FBEF /* MFContactDataComposer.m in Sources */,
+				93E68BE71DB7699C00A0FBEF /* MFContactsBaseRoutine.m in Sources */,
+				93E68B681DB4BA7900A0FBEF /* MFRootViewController.m in Sources */,
+				93E68B5A1DB4B9F200A0FBEF /* AppDelegate.m in Sources */,
+				93E68BB91DB7697B00A0FBEF /* MFContactsModels.m in Sources */,
+				93E68BE51DB7699C00A0FBEF /* MFContactDataExtractor.m in Sources */,
+				93E68BBA1DB7697B00A0FBEF /* MFThread.m in Sources */,
+				93E68BCE1DB7698800A0FBEF /* MFAddressBookChangeRoutine.m in Sources */,
+				93E68BCF1DB7698800A0FBEF /* MFAddressBookContactsRoutine.m in Sources */,
+				93E68BCC1DB7698800A0FBEF /* MFAddressBookBaseRoutine.m in Sources */,
+				93E68BE61DB7699C00A0FBEF /* MFContactsAccessRoutine.m in Sources */,
+				93E68BB81DB7697B00A0FBEF /* MFContactsManager.m in Sources */,
+				93E68BD11DB7698800A0FBEF /* MFAddressBookDataExtractor.m in Sources */,
+				93E68BCB1DB7698800A0FBEF /* MFAddressBookAccessRoutine.m in Sources */,
+				93E68BD21DB7698800A0FBEF /* MFAddressBookHelper.m in Sources */,
+				93E68BE81DB7699C00A0FBEF /* MFContactsChangeRoutine.m in Sources */,
+				93E68BEA1DB7699C00A0FBEF /* MFContactsStoreRoutine.m in Sources */,
+				93E68B571DB4B9F200A0FBEF /* main.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		93E68B5D1DB4B9F200A0FBEF /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				93E68B5E1DB4B9F200A0FBEF /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		93E68B611DB4B9F200A0FBEF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		93E68B621DB4B9F200A0FBEF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		93E68B641DB4B9F200A0FBEF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 8CCM9ZW328;
+				INFOPLIST_FILE = MFContactsDemo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = DaydreamNation.MFContactsDemo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		93E68B651DB4B9F200A0FBEF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 8CCM9ZW328;
+				INFOPLIST_FILE = MFContactsDemo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = DaydreamNation.MFContactsDemo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		93E68B4D1DB4B9F200A0FBEF /* Build configuration list for PBXProject "MFContactsDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				93E68B611DB4B9F200A0FBEF /* Debug */,
+				93E68B621DB4B9F200A0FBEF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		93E68B631DB4B9F200A0FBEF /* Build configuration list for PBXNativeTarget "MFContactsDemo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				93E68B641DB4B9F200A0FBEF /* Debug */,
+				93E68B651DB4B9F200A0FBEF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 93E68B4A1DB4B9F200A0FBEF /* Project object */;
+}
