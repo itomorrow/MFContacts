@@ -38,8 +38,9 @@
 - (NSArray *)phones
 {
     return [self mapMultiValueOfProperty:self.contactRef.phoneNumbers withBlock:^id(CNLabeledValue *value) {
+        CNPhoneNumber* number = value.value;
         MFPhone* phone = [[MFPhone alloc] init];
-        phone.number = value.value;
+        phone.number = number.stringValue;
         phone.originalLabel = value.label;
         phone.localizedLabel = [self localizedLabelFromOriginalValue:value.label];
         return phone;
