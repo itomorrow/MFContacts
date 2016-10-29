@@ -47,19 +47,19 @@
     {
         contact.job = [self.extractor job];
     }
-    if (fieldMask & MFContactFieldThumbnail)
+    if (fieldMask & MFContactFieldPhone)
     {
-        contact.thumbnail = [self.extractor thumbnail];
+        contact.photo = [self.extractor photo];
     }
-    if (fieldMask & MFContactFieldPhonesOnly || fieldMask & MFContactFieldPhonesWithLabels)
+    if (fieldMask & MFContactFieldPhone)
     {
         contact.phones = [self.extractor phones];
     }
-    if (fieldMask & MFContactFieldEmailsOnly || fieldMask & MFContactFieldEmailsWithLabels)
+    if (fieldMask & MFContactFieldEmail)
     {
         contact.emails = [self.extractor emails];
     }
-    if (fieldMask & MFContactFieldAddressesOnly || fieldMask & MFContactFieldAddressesWithLabels)
+    if (fieldMask & MFContactFieldAddress)
     {
         contact.addresses = [self.extractor addresses];
     }
@@ -98,8 +98,8 @@
     if (contact.job) {
         [self.composer composeJob:contact.job];
     }
-    if (contact.thumbnail) {
-        [self.composer composeThumbnail:contact.thumbnail];
+    if (contact.photo) {
+        [self.composer composePhoto:contact.photo];
     }
     if (contact.phones.count > 0) {
         [self.composer composePhones:contact.phones];
@@ -141,19 +141,19 @@
         [fieldKeys addObject:CNContactDepartmentNameKey];
         [fieldKeys addObject:CNContactJobTitleKey];
     }
-    if (fieldMask & MFContactFieldThumbnail)
+    if (fieldMask & MFContactFieldPhoto)
     {
         [fieldKeys addObject:CNContactThumbnailImageDataKey];
     }
-    if (fieldMask & MFContactFieldPhonesOnly || fieldMask & MFContactFieldPhonesWithLabels)
+    if (fieldMask & MFContactFieldPhone)
     {
         [fieldKeys addObject:CNContactPhoneNumbersKey];
     }
-    if (fieldMask & MFContactFieldEmailsOnly || fieldMask & MFContactFieldEmailsWithLabels)
+    if (fieldMask & MFContactFieldEmail)
     {
         [fieldKeys addObject:CNContactEmailAddressesKey];
     }
-    if (fieldMask & MFContactFieldAddressesOnly || fieldMask & MFContactFieldAddressesWithLabels)
+    if (fieldMask & MFContactFieldAddress)
     {
         [fieldKeys addObject:CNContactPostalAddressesKey];
     }

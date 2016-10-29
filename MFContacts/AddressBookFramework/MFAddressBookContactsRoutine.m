@@ -63,8 +63,8 @@
     {
         ABRecordID recordID = identifier.intValue;
         ABRecordRef recordRef = ABAddressBookGetPersonWithRecordID(self.wrapper.ref, recordID);
-        MFContact* contact = [self.builder contactWithRecordRef:recordRef fieldMask:MFContactFieldThumbnail];
-        return contact.thumbnail;
+        MFContact* contact = [self.builder contactWithRecordRef:recordRef fieldMask:MFContactFieldPhoto];
+        return contact.photo;
     }
     return nil;
 }

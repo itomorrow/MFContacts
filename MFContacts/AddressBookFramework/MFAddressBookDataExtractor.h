@@ -21,20 +21,20 @@
 
 - (MFName *)name;
 - (MFJob *)job;
-- (NSArray *)phonesWithLabels:(BOOL)needLabels;
-- (NSArray *)emailsWithLabels:(BOOL)needLabels;
-- (NSArray *)addressesWithLabels:(BOOL)labels;
+- (NSArray *)phones;
+- (NSArray *)emails;
+- (NSArray *)addresses;
 - (NSArray *)socialProfiles;
 - (NSArray *)relatedPersons;
 - (NSArray *)linkedRecordIDs;
 - (MFSource *)source;
 - (NSArray *)dates;
 - (MFRecordDate *)recordDate;
+- (NSArray*)websites;
 - (NSString *)stringProperty:(ABPropertyID)property;
 - (NSArray *)arrayProperty:(ABPropertyID)property;
 - (NSDate *)dateProperty:(ABPropertyID)property;
 
-- (UIImage *)thumbnail;
 - (UIImage *)photo;
 
 @end

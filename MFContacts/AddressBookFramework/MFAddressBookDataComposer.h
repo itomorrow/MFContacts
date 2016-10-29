@@ -29,11 +29,11 @@
 - (void)composeLinkedRecordIDs:(NSArray*)IDs;
 - (void)composeSource:(MFSource*)source;
 - (void)composeDates:(NSArray*)dates;
+- (void)composeWebsites:(NSArray*)sites;
 - (void)composeRecordDate:(MFRecordDate*)recordDate;
 - (bool)setStringProperty:(ABPropertyID)property withValue:(NSString*)value;
 - (bool)setDateProperty:(ABPropertyID)property withValue:(NSDate*)value;
 
-- (void)composeThumbnail:(UIImage *)image;
 - (void)compsePhoto:(UIImage *)image;
 
 @end

@@ -28,6 +28,7 @@
 @class MFSource;
 @class MFContactDate;
 @class MFRecordDate;
+@class MFWebSite;
 
 
 
@@ -39,11 +40,12 @@
 @property (nonnull, nonatomic, strong) NSString *identifier;
 @property (nullable, nonatomic, strong) MFName *name;
 @property (nullable, nonatomic, strong) MFJob *job;
-@property (nullable, nonatomic, strong) UIImage *thumbnail;
+@property (nullable, nonatomic, strong) UIImage *photo;
 @property (nullable, nonatomic, strong) NSArray <MFPhone *> *phones;
 @property (nullable, nonatomic, strong) NSArray <MFEmail *> *emails;
 @property (nullable, nonatomic, strong) NSArray <MFAddress *> *addresses;
 @property (nullable, nonatomic, strong) NSArray <MFSocialProfile *> *socialProfiles;
+@property (nullable, nonatomic, strong) NSArray <MFWebSite *> *websites;
 @property (nullable, nonatomic, strong) NSDate *birthday;
 @property (nullable, nonatomic, strong) NSString *note;
 @property (nullable, nonatomic, strong) NSArray <MFRelatedPerson *> *relatedPersons;
@@ -102,6 +104,14 @@
 @property (nullable, nonatomic, strong) NSString *zip;
 @property (nullable, nonatomic, strong) NSString *country;
 @property (nullable, nonatomic, strong) NSString *countryCode;
+@property (nullable, nonatomic, strong) NSString *originalLabel;
+@property (nullable, nonatomic, strong) NSString *localizedLabel;
+
+@end
+
+@interface MFWebSite : NSObject
+
+@property (nullable, nonatomic, strong) NSString *website;
 @property (nullable, nonatomic, strong) NSString *originalLabel;
 @property (nullable, nonatomic, strong) NSString *localizedLabel;
 

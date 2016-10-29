@@ -19,12 +19,18 @@ static id<MFContactsHelperProtocol> helper = nil;
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
         manager = [[super allocWithZone:NULL] init];
+        
+#ifdef FORCE_USE_ADDRESSBOOK_FRAMEWORK
+        helper = [[ASAddressBookHelper alloc] init];
+#else
         float version = [[[UIDevice currentDevice] systemVersion] floatValue];
-        if (version > 9.0) {
+        if (version >= 9.0) {
             helper = [[MFContactsHelper alloc] init];
         } else {
             helper = [[MFAddressBookHelper alloc] init];
         }
+#endif
+
     });
     return manager;
 }

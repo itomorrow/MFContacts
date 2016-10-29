@@ -138,6 +138,15 @@
     }];
 }
 
+- (void)composeWebsites:(NSArray*)sites{
+    [self setMultiValue:sites OfProperty:kABPersonURLProperty withBlock:^bool(ABMultiValueRef multiValue, id srcValue) {
+        bool result = NO;
+        MFWebSite* website = (MFWebSite*)srcValue;
+        result = ABMultiValueAddValueAndLabel(multiValue, (__bridge CFStringRef)website.website, (__bridge CFStringRef)website.originalLabel, NULL);
+        return result;
+    }];
+}
+
 - (void)composeRecordDate:(MFRecordDate*)recordDate
 {
     if (recordDate.creationDate) {
@@ -158,12 +167,6 @@
     CFErrorRef err = NULL;
     bool result = ABRecordSetValue(self.recordRef, property, (__bridge CFDateRef)value, &err);
     return result && err == NULL;
-}
-
-- (void)composeThumbnail:(UIImage *)image{
-    NSData *dataref = UIImagePNGRepresentation(image);
-    CFErrorRef error = NULL;
-    ABPersonSetImageData(self.recordRef, (__bridge CFDataRef)(dataref), &error);
 }
 
 - (void)compsePhoto:(UIImage *)image{

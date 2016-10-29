@@ -68,7 +68,7 @@
     contact.job.department = @"Creative";
     contact.job.orgnazition = @"Gelubie";
     
-    contact.thumbnail = [UIImage imageNamed:@"pic.jpg"];
+    contact.photo = [UIImage imageNamed:@"pic.jpg"];
     
     MFPhone* phone1 = [[MFPhone alloc] init];
     phone1.number = @"13834234323";
@@ -159,7 +159,7 @@
     
     MFContact* contact = [self.contacts objectAtIndex:indexPath.row];
     cell.textLabel.text = contact.name.compositeName;
-    cell.imageView.image = contact.thumbnail;
+    cell.imageView.image = contact.photo;
     
     return cell;
 }

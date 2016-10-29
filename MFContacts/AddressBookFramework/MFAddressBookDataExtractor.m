@@ -33,7 +33,7 @@
     return job;
 }
 
-- (NSArray *)phonesWithLabels:(BOOL)needLabels
+- (NSArray *)phones
 {
     return [self mapMultiValueOfProperty:kABPersonPhoneProperty
                                withBlock:^id(ABMultiValueRef multiValue, CFTypeRef value, CFIndex index)
@@ -43,17 +43,14 @@
         {
             phone = [[MFPhone alloc] init];
             phone.number = (__bridge NSString *)value;
-            if (needLabels)
-            {
-                phone.originalLabel = [self originalLabelFromMultiValue:multiValue index:index];
-                phone.localizedLabel = [self localizedLabelFromMultiValue:multiValue index:index];
-            }
+            phone.originalLabel = [self originalLabelFromMultiValue:multiValue index:index];
+            phone.localizedLabel = [self localizedLabelFromMultiValue:multiValue index:index];
         }
         return phone;
     }];
 }
 
-- (NSArray *)emailsWithLabels:(BOOL)needLabels
+- (NSArray *)emails
 {
     return [self mapMultiValueOfProperty:kABPersonEmailProperty
                                withBlock:^id(ABMultiValueRef multiValue, CFTypeRef value, CFIndex index)
@@ -63,17 +60,14 @@
         {
             email = [[MFEmail alloc] init];
             email.address = (__bridge NSString *)value;
-            if (needLabels)
-            {
-                email.originalLabel = [self originalLabelFromMultiValue:multiValue index:index];
-                email.localizedLabel = [self localizedLabelFromMultiValue:multiValue index:index];
-            }
+            email.originalLabel = [self originalLabelFromMultiValue:multiValue index:index];
+            email.localizedLabel = [self localizedLabelFromMultiValue:multiValue index:index];
         }
         return email;
     }];
 }
 
-- (NSArray *)addressesWithLabels:(BOOL)needLabels
+- (NSArray *)addresses
 {
     return [self mapMultiValueOfProperty:kABPersonAddressProperty
                                withBlock:^id(ABMultiValueRef multiValue, CFTypeRef value, CFIndex index)
@@ -86,11 +80,8 @@
         address.zip = dictionary[(__bridge NSString *)kABPersonAddressZIPKey];
         address.country = dictionary[(__bridge NSString *)kABPersonAddressCountryKey];
         address.countryCode = dictionary[(__bridge NSString *)kABPersonAddressCountryCodeKey];
-        if (needLabels)
-        {
-            address.originalLabel = [self originalLabelFromMultiValue:multiValue index:index];
-            address.localizedLabel = [self localizedLabelFromMultiValue:multiValue index:index];
-        }
+        address.originalLabel = [self originalLabelFromMultiValue:multiValue index:index];
+        address.localizedLabel = [self localizedLabelFromMultiValue:multiValue index:index];
         return address;
     }];
 }
@@ -187,6 +178,22 @@
     return recordDate;
 }
 
+- (NSArray *)websites{
+    return [self mapMultiValueOfProperty:kABPersonURLProperty
+                               withBlock:^id(ABMultiValueRef multiValue, CFTypeRef value, CFIndex index)
+            {
+                MFWebSite *web;
+                if (value)
+                {
+                    web = [[MFWebSite alloc] init];
+                    web.website = (__bridge NSString*)value;
+                    web.originalLabel = [self originalLabelFromMultiValue:multiValue index:index];
+                    web.localizedLabel = [self localizedLabelFromMultiValue:multiValue index:index];
+                }
+                return web;
+            }];
+}
+
 - (NSString *)stringProperty:(ABPropertyID)property
 {
     return [self stringProperty:property fromRecordRef:self.recordRef];
@@ -204,10 +211,6 @@
 {
     CFDateRef dateRef = ABRecordCopyValue(self.recordRef, property);
     return (__bridge_transfer NSDate *)dateRef;
-}
-
-- (UIImage *)thumbnail{
-    return [MFAddressBookDataExtractor imageWithRecordRef:self.recordRef fullSize:NO];
 }
 
 - (UIImage *)photo{

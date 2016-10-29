@@ -76,6 +76,9 @@
 
 @end
 
+@implementation MFWebSite
+
+@end
 
 @implementation MFEmail
 

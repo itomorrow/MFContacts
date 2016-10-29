@@ -57,8 +57,8 @@
 - (UIImage *)imageWithIdentifier:(NSString *)identifier
 {
     if (self.contactStore) {
-        MFContact* contact = [self.builder contactWithIdentifier:identifier fieldMask:MFContactFieldThumbnail];
-        return contact.thumbnail;
+        MFContact* contact = [self.builder contactWithIdentifier:identifier fieldMask:MFContactFieldPhoto];
+        return contact.photo;
     }
     return nil;
 }

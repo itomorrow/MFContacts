@@ -123,14 +123,14 @@
 
 - (void)composeWebsites:(NSArray*)urls{
     NSMutableArray* targetURLs = [[NSMutableArray alloc] init];
-    for (NSString* url in urls) {
-        CNLabeledValue* labeledValue = [CNLabeledValue labeledValueWithLabel:CNLabelHome value:url];
+    for (MFWebSite* url in urls) {
+        CNLabeledValue* labeledValue = [CNLabeledValue labeledValueWithLabel:url.originalLabel value:url.website];
         [targetURLs addObject:labeledValue];
     }
     self.contactRef.urlAddresses = targetURLs;
 }
 
-- (void)composeThumbnail:(UIImage *)image{
+- (void)composePhoto:(UIImage *)image{
     self.contactRef.imageData = UIImagePNGRepresentation(image);
 }
 

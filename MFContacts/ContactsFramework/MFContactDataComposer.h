@@ -31,7 +31,7 @@
 - (void)composeSocialProfiles:(NSArray*)profiles;
 - (void)composeRelatedPersons:(NSArray*)persons;
 - (void)composeDates:(NSArray*)dates;
-- (void)composeThumbnail:(UIImage *)image;
+- (void)composePhoto:(UIImage *)image;
 
 @end
 

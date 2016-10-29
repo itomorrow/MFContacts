@@ -6,7 +6,7 @@
 //  Copyright © 2016年 Mason. All rights reserved.
 //
 
-#define USE_NEWFRAMEWORK
+//#define FORCE_USE_ADDRESSBOOK_FRAMEWORK
 
 typedef NS_ENUM(NSUInteger, MFAddressBookAccess)
 {
@@ -17,25 +17,24 @@ typedef NS_ENUM(NSUInteger, MFAddressBookAccess)
 
 typedef NS_OPTIONS(NSUInteger, MFContactField)
 {
-    MFContactFieldName                  = 1 << 0,
-    MFContactFieldJob                   = 1 << 1,
-    MFContactFieldThumbnail             = 1 << 2,
-    MFContactFieldPhonesOnly            = 1 << 3,
-    MFContactFieldPhonesWithLabels      = 1 << 4,
-    MFContactFieldEmailsOnly            = 1 << 5,
-    MFContactFieldEmailsWithLabels      = 1 << 6,
-    MFContactFieldAddressesWithLabels   = 1 << 7,
-    MFContactFieldAddressesOnly         = 1 << 8,
-    MFContactFieldSocialProfiles        = 1 << 9,
-    MFContactFieldBirthday              = 1 << 10,
-    MFContactFieldNote                  = 1 << 11,
-    MFContactFieldRelatedPersons        = 1 << 12,
-    MFContactFieldLinkedRecordIDs       = 1 << 13,
-    MFContactFieldSource                = 1 << 14,
-    MFContactFieldDates                 = 1 << 15,
-    MFContactFieldRecordDate            = 1 << 16,
-    MFContactFieldIdentifier            = 1 << 17,
-    MFContactFieldDefault               = MFContactFieldName | MFContactFieldPhonesOnly,
+    MFContactFieldIdentifier            = 1 << 0,
+    MFContactFieldName                  = 1 << 1,
+    MFContactFieldJob                   = 1 << 2,
+    MFContactFieldPhoto                 = 1 << 3,
+    MFContactFieldPhone                 = 1 << 4,
+    MFContactFieldEmail                 = 1 << 5,
+    MFContactFieldWebSite               = 1 << 6,
+    MFContactFieldAddress               = 1 << 7,
+    MFContactFieldSocialProfiles        = 1 << 8,
+    MFContactFieldBirthday              = 1 << 9,
+    MFContactFieldNote                  = 1 << 10,
+    MFContactFieldRelatedPersons        = 1 << 11,
+    MFContactFieldLinkedRecordIDs       = 1 << 12,
+    MFContactFieldSource                = 1 << 13,
+    MFContactFieldDates                 = 1 << 14,
+    MFContactFieldRecordDate            = 1 << 15,
+
+    MFContactFieldDefault               = MFContactFieldName | MFContactFieldPhone,
     MFContactFieldAll                   = 0xFFFFFFFF
 };
 

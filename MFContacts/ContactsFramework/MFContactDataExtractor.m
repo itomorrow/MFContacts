@@ -124,7 +124,7 @@
     }];
 }
 
-- (UIImage *)thumbnail{
+- (UIImage *)photo{
     return [UIImage imageWithData:self.contactRef.thumbnailImageData];
 }
 

@@ -47,21 +47,21 @@
     {
         contact.job = [self.extractor job];
     }
-    if (fieldMask & MFContactFieldThumbnail)
+    if (fieldMask & MFContactFieldPhone)
     {
-        contact.thumbnail = [self.extractor thumbnail];
+        contact.photo = [self.extractor photo];
     }
-    if (fieldMask & MFContactFieldPhonesOnly || fieldMask & MFContactFieldPhonesWithLabels)
+    if (fieldMask & MFContactFieldPhone)
     {
-        contact.phones = [self.extractor phonesWithLabels:(fieldMask & MFContactFieldPhonesWithLabels)];
+        contact.phones = [self.extractor phones];
     }
-    if (fieldMask & MFContactFieldEmailsOnly || fieldMask & MFContactFieldEmailsWithLabels)
+    if (fieldMask & MFContactFieldEmail)
     {
-        contact.emails = [self.extractor emailsWithLabels:(fieldMask & MFContactFieldEmailsWithLabels)];
+        contact.emails = [self.extractor emails];
     }
-    if (fieldMask & MFContactFieldAddressesOnly || fieldMask & MFContactFieldAddressesWithLabels)
+    if (fieldMask & MFContactFieldAddress)
     {
-        contact.addresses = [self.extractor addressesWithLabels:(fieldMask & MFContactFieldAddressesWithLabels)];
+        contact.addresses = [self.extractor addresses];
     }
     if (fieldMask & MFContactFieldSocialProfiles)
     {
@@ -95,6 +95,9 @@
     {
         contact.recordDate = [self.extractor recordDate];
     }
+    if (fieldMask & MFContactFieldWebSite) {
+        contact.websites = [self.extractor websites];
+    }
     return contact;
 }
 
@@ -109,8 +112,8 @@
     if (contact.job) {
         [self.composer composeJob:contact.job];
     }
-    if (contact.thumbnail) {
-        [self.composer composeThumbnail:contact.thumbnail];
+    if (contact.photo) {
+        [self.composer compsePhoto:contact.photo];
     }
     if (contact.phones.count > 0) {
         [self.composer composePhones:contact.phones];
@@ -144,6 +147,9 @@
     }
     if (contact.recordDate) {
         [self.composer composeRecordDate:contact.recordDate];
+    }
+    if (contact.websites.count > 0) {
+        [self.composer composeWebsites:contact.websites];
     }
     return record;
 }
