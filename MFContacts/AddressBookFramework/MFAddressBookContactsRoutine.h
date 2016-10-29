@@ -18,11 +18,15 @@
 // read
 - (nullable NSArray *)allContactsWithContactFieldMask:(MFContactField)fieldMask;
 - (nullable MFContact *)contactByIdentifier:(nullable NSString *)identifier withFieldMMFk:(MFContactField)fieldMask;
-- (nullable UIImage *)imageWithIdentifier:(nullable NSString *)identifier;
+- (nullable NSData *)imageWithIdentifier:(nullable NSString *)identifier;
 
 // write contact
 - (nullable NSError*)writeContact:(nonnull MFContact *)contact;
 - (nullable NSError*)writeContacts:(nonnull NSArray *)contacts;
+
+// update contact
+- (BOOL)updateContact:(nonnull MFContact *)contact;
+- (BOOL)updateContacts:(nonnull NSArray *)contacts;
 
 // remove contact
 - (nullable NSError*)removeContactByIdentifier:(nonnull NSString *)identifier;

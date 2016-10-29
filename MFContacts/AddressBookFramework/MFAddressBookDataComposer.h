@@ -34,7 +34,7 @@
 - (bool)setStringProperty:(ABPropertyID)property withValue:(NSString*)value;
 - (bool)setDateProperty:(ABPropertyID)property withValue:(NSDate*)value;
 
-- (void)compsePhoto:(UIImage *)image;
+- (void)composePhoto:(NSData *)image;
 
 @end
 

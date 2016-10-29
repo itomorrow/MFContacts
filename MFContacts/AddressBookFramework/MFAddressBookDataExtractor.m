@@ -213,7 +213,7 @@
     return (__bridge_transfer NSDate *)dateRef;
 }
 
-- (UIImage *)photo{
+- (NSData *)photo{
     return [MFAddressBookDataExtractor imageWithRecordRef:self.recordRef fullSize:YES];
 }
 
@@ -276,12 +276,13 @@
     return (__bridge_transfer NSString *)valueRef;
 }
 
-+ (UIImage *)imageWithRecordRef:(ABRecordRef)recordRef fullSize:(BOOL)isFullSize
++ (NSData *)imageWithRecordRef:(ABRecordRef)recordRef fullSize:(BOOL)isFullSize
 {
     ABPersonImageFormat format = isFullSize ? kABPersonImageFormatOriginalSize :
     kABPersonImageFormatThumbnail;
     NSData *data = (__bridge_transfer NSData *)ABPersonCopyImageDataWithFormat(recordRef, format);
-    return [UIImage imageWithData:data scale:UIScreen.mainScreen.scale];
+    return data;
+    //return [UIImage imageWithData:data scale:UIScreen.mainScreen.scale];
 }
 
 - (MFSocialNetworkType)socialNetworkTypeWithString:(NSString *)string

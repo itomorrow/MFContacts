@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		93B4411D1DC4901D00629690 /* MFContactUpdate.m in Sources */ = {isa = PBXBuildFile; fileRef = 93B4411C1DC4901D00629690 /* MFContactUpdate.m */; };
+		93B441201DC490A200629690 /* MFAddressBookUpdate.m in Sources */ = {isa = PBXBuildFile; fileRef = 93B4411F1DC490A200629690 /* MFAddressBookUpdate.m */; };
 		93E68B571DB4B9F200A0FBEF /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 93E68B561DB4B9F200A0FBEF /* main.m */; };
 		93E68B5A1DB4B9F200A0FBEF /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 93E68B591DB4B9F200A0FBEF /* AppDelegate.m */; };
 		93E68B5C1DB4B9F200A0FBEF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 93E68B5B1DB4B9F200A0FBEF /* Assets.xcassets */; };
@@ -34,6 +36,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		93B4411B1DC4901D00629690 /* MFContactUpdate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MFContactUpdate.h; path = MFContacts/ContactsFramework/MFContactUpdate.h; sourceTree = SOURCE_ROOT; };
+		93B4411C1DC4901D00629690 /* MFContactUpdate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MFContactUpdate.m; path = MFContacts/ContactsFramework/MFContactUpdate.m; sourceTree = SOURCE_ROOT; };
+		93B4411E1DC490A200629690 /* MFAddressBookUpdate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MFAddressBookUpdate.h; path = MFContacts/AddressBookFramework/MFAddressBookUpdate.h; sourceTree = SOURCE_ROOT; };
+		93B4411F1DC490A200629690 /* MFAddressBookUpdate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MFAddressBookUpdate.m; path = MFContacts/AddressBookFramework/MFAddressBookUpdate.m; sourceTree = SOURCE_ROOT; };
 		93E68B521DB4B9F200A0FBEF /* MFContactsDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MFContactsDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		93E68B561DB4B9F200A0FBEF /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		93E68B581DB4B9F200A0FBEF /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; lineEnding = 0; path = AppDelegate.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
@@ -169,6 +175,8 @@
 				93E68BBC1DB7698800A0FBEF /* MFAddressBookAccessRoutine.m */,
 				93E68BBF1DB7698800A0FBEF /* MFAddressBookBuilder.h */,
 				93E68BC01DB7698800A0FBEF /* MFAddressBookBuilder.m */,
+				93B4411E1DC490A200629690 /* MFAddressBookUpdate.h */,
+				93B4411F1DC490A200629690 /* MFAddressBookUpdate.m */,
 				93E68BC51DB7698800A0FBEF /* MFAddressBookDataComposer.h */,
 				93E68BC61DB7698800A0FBEF /* MFAddressBookDataComposer.m */,
 				93E68BC71DB7698800A0FBEF /* MFAddressBookDataExtractor.h */,
@@ -192,6 +200,8 @@
 				93E68BE21DB7699C00A0FBEF /* MFContactsStoreRoutine.m */,
 				93E68BD31DB7699C00A0FBEF /* MFContactBuilder.h */,
 				93E68BD41DB7699C00A0FBEF /* MFContactBuilder.m */,
+				93B4411B1DC4901D00629690 /* MFContactUpdate.h */,
+				93B4411C1DC4901D00629690 /* MFContactUpdate.m */,
 				93E68BD51DB7699C00A0FBEF /* MFContactDataComposer.h */,
 				93E68BD61DB7699C00A0FBEF /* MFContactDataComposer.m */,
 				93E68BD71DB7699C00A0FBEF /* MFContactDataExtractor.h */,
@@ -279,10 +289,12 @@
 				93E68BE71DB7699C00A0FBEF /* MFContactsBaseRoutine.m in Sources */,
 				93E68B681DB4BA7900A0FBEF /* MFRootViewController.m in Sources */,
 				93E68B5A1DB4B9F200A0FBEF /* AppDelegate.m in Sources */,
+				93B441201DC490A200629690 /* MFAddressBookUpdate.m in Sources */,
 				93E68BB91DB7697B00A0FBEF /* MFContactsModels.m in Sources */,
 				93E68BE51DB7699C00A0FBEF /* MFContactDataExtractor.m in Sources */,
 				93E68BBA1DB7697B00A0FBEF /* MFThread.m in Sources */,
 				93E68BCE1DB7698800A0FBEF /* MFAddressBookChangeRoutine.m in Sources */,
+				93B4411D1DC4901D00629690 /* MFContactUpdate.m in Sources */,
 				93E68BCF1DB7698800A0FBEF /* MFAddressBookContactsRoutine.m in Sources */,
 				93E68BCC1DB7698800A0FBEF /* MFAddressBookBaseRoutine.m in Sources */,
 				93E68BE61DB7699C00A0FBEF /* MFContactsAccessRoutine.m in Sources */,

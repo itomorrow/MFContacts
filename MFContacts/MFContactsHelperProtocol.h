@@ -17,8 +17,8 @@ typedef void(^MFReadContactsBlock)(NSArray <MFContact *> * _Nullable contacts, N
 typedef void(^MFWriteContactBlock)(NSError * _Nullable error);
 typedef void(^MFRemoveContactBlock)(NSError * _Nullable error);
 typedef void(^MFReadContactBlock)(MFContact * _Nullable contact);
-typedef void(^MFReadPhotoBlock)(UIImage * _Nullable photo);
-
+typedef void(^MFReadPhotoBlock)(NSData * _Nullable photo);
+typedef void(^MFUpdateContactBlock)(NSError * _Nullable error);
 
 
 @protocol MFContactsHelperProtocol <NSObject>
@@ -59,6 +59,19 @@ typedef void(^MFReadPhotoBlock)(UIImage * _Nullable photo);
 - (void)writeContacts:(nonnull NSArray *)contacts
              onQueue:(nonnull dispatch_queue_t)queue
           completion:(nonnull MFWriteContactBlock)completion;
+
+// update contact
+- (void)updateContact:(nonnull MFContact *)contact
+           completion:(nonnull MFUpdateContactBlock)completion;
+- (void)updateContact:(nonnull MFContact *)contact
+              onQueue:(nonnull dispatch_queue_t)queue
+           completion:(nonnull MFUpdateContactBlock)completion;
+
+- (void)updateContacts:(nonnull NSArray *)contacts
+            completion:(nonnull MFUpdateContactBlock)completion;
+- (void)updateContacts:(nonnull NSArray *)contacts
+               onQueue:(nonnull dispatch_queue_t)queue
+            completion:(nonnull MFUpdateContactBlock)completion;
 
 // remove contact
 - (void)removeContactByIdentifier:(nonnull NSString *)identifier

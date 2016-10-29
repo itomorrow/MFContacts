@@ -98,7 +98,7 @@
                  completion:(MFReadPhotoBlock)completion
 {
     [self.thread dispatchAsync:^{
-         UIImage *image = [self.contacts imageWithIdentifier:identifier];
+         NSData *image = [self.contacts imageWithIdentifier:identifier];
          dispatch_async(queue, ^
                         {
                             completion ? completion(image) : nil;
@@ -134,6 +134,39 @@
         NSError* err = [self.contacts writeContacts:contact];
         dispatch_async(queue, ^{
             completion ? completion(err) : nil;
+        });
+    }];
+}
+
+// update contact
+- (void)updateContact:(nonnull MFContact *)contact
+           completion:(nonnull MFUpdateContactBlock)completion{
+    [self updateContact:contact onQueue:dispatch_get_main_queue() completion:completion];
+}
+
+- (void)updateContact:(nonnull MFContact *)contact
+              onQueue:(nonnull dispatch_queue_t)queue
+           completion:(nonnull MFUpdateContactBlock)completion{
+    [self.thread dispatchAsync:^{
+        [self.contacts updateContact:contact];
+        dispatch_async(queue, ^{
+            completion ? completion(nil) : nil;
+        });
+    }];
+}
+
+- (void)updateContacts:(nonnull NSArray *)contacts
+            completion:(nonnull MFUpdateContactBlock)completion{
+    [self updateContacts:contacts onQueue:dispatch_get_main_queue() completion:completion];
+}
+
+- (void)updateContacts:(nonnull NSArray *)contacts
+               onQueue:(nonnull dispatch_queue_t)queue
+            completion:(nonnull MFUpdateContactBlock)completion{
+    [self.thread dispatchAsync:^{
+        [self.contacts updateContacts:contacts];
+        dispatch_async(queue, ^{
+            completion ? completion(nil) : nil;
         });
     }];
 }

@@ -19,11 +19,15 @@ typedef void(^MFReadContactsBlock)(NSArray <MFContact *> * _Nullable contacts, N
 //read
 - (void)allContactsWithContactFieldMask:(MFContactField)fieldMask with:(nonnull MFReadContactsBlock)block;
 - (nullable MFContact *)contactByIdentifier:(nullable NSString *)identifier withFieldMask:(MFContactField)fieldMask;
-- (nullable UIImage *)imageWithIdentifier:(nullable NSString *)identifier;
+- (nullable NSData *)imageWithIdentifier:(nullable NSString *)identifier;
 
 // write contact
 - (nullable NSError*)writeContact:(nonnull MFContact *)contact;
 - (nullable NSError*)writeContacts:(nonnull NSArray *)contacts;
+
+// update contact
+- (BOOL)updateContact:(nonnull MFContact *)contact;
+- (BOOL)updateContacts:(nonnull NSArray *)contacts;
 
 // remove contact
 - (nullable NSError*)removeContactByIdentifier:(nonnull NSString *)identifier;

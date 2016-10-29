@@ -124,8 +124,8 @@
     }];
 }
 
-- (UIImage *)photo{
-    return [UIImage imageWithData:self.contactRef.thumbnailImageData];
+- (NSData *)photo{
+    return self.contactRef.thumbnailImageData;
 }
 
 #pragma mark - private

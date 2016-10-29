@@ -47,9 +47,9 @@
     {
         contact.job = [self.extractor job];
     }
-    if (fieldMask & MFContactFieldPhone)
+    if (fieldMask & MFContactFieldPhoto)
     {
-        contact.photo = [self.extractor photo];
+        contact.imageData = [self.extractor photo];
     }
     if (fieldMask & MFContactFieldPhone)
     {
@@ -112,8 +112,8 @@
     if (contact.job) {
         [self.composer composeJob:contact.job];
     }
-    if (contact.photo) {
-        [self.composer compsePhoto:contact.photo];
+    if (contact.imageData) {
+        [self.composer composePhoto:contact.imageData];
     }
     if (contact.phones.count > 0) {
         [self.composer composePhones:contact.phones];

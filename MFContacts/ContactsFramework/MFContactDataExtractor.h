@@ -31,6 +31,6 @@
 - (NSString*)note;
 - (NSArray *)relatedPersons;
 - (NSArray *)dates;
-- (UIImage *)photo;
+- (NSData *)photo;
 
 @end

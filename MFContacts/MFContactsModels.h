@@ -40,7 +40,7 @@
 @property (nonnull, nonatomic, strong) NSString *identifier;
 @property (nullable, nonatomic, strong) MFName *name;
 @property (nullable, nonatomic, strong) MFJob *job;
-@property (nullable, nonatomic, strong) UIImage *photo;
+@property (nullable, nonatomic, strong) NSData *imageData;
 @property (nullable, nonatomic, strong) NSArray <MFPhone *> *phones;
 @property (nullable, nonatomic, strong) NSArray <MFEmail *> *emails;
 @property (nullable, nonatomic, strong) NSArray <MFAddress *> *addresses;

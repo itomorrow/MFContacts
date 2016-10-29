@@ -169,10 +169,10 @@
     return result && err == NULL;
 }
 
-- (void)compsePhoto:(UIImage *)image{
-    NSData *dataref = UIImagePNGRepresentation(image);
+- (void)composePhoto:(NSData *)image{
+    //NSData *dataref = UIImagePNGRepresentation(image);
     CFErrorRef error = NULL;
-    ABPersonSetImageData(self.recordRef, (__bridge CFDataRef)(dataref), &error);
+    ABPersonSetImageData(self.recordRef, (__bridge CFDataRef)(image), &error);
 }
 
 #pragma mark - private

@@ -113,6 +113,29 @@ static id<MFContactsHelperProtocol> helper = nil;
     return [helper writeContacts:contacts onQueue:queue completion:completion];
 }
 
+// update contact
+- (void)updateContact:(nonnull MFContact *)contact
+           completion:(nonnull MFUpdateContactBlock)completion{
+    return [helper updateContact:contact completion:completion];
+}
+
+- (void)updateContact:(nonnull MFContact *)contact
+              onQueue:(nonnull dispatch_queue_t)queue
+           completion:(nonnull MFUpdateContactBlock)completion{
+    return [helper updateContact:contact onQueue:queue completion:completion];
+}
+
+- (void)updateContacts:(nonnull NSArray *)contacts
+            completion:(nonnull MFUpdateContactBlock)completion{
+    return [helper updateContacts:contacts completion:completion];
+}
+
+- (void)updateContacts:(nonnull NSArray *)contacts
+               onQueue:(nonnull dispatch_queue_t)queue
+            completion:(nonnull MFUpdateContactBlock)completion{
+    return [helper updateContacts:contacts onQueue:queue completion:completion];
+}
+
 // remove contact
 - (void)removeContactByIdentifier:(nonnull NSString *)identifier
                        completion:(nonnull MFRemoveContactBlock)completion{

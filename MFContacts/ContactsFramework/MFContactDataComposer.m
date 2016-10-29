@@ -130,8 +130,8 @@
     self.contactRef.urlAddresses = targetURLs;
 }
 
-- (void)composePhoto:(UIImage *)image{
-    self.contactRef.imageData = UIImagePNGRepresentation(image);
+- (void)composePhoto:(NSData *)image{
+    self.contactRef.imageData = image;
 }
 
 #pragma mark - private

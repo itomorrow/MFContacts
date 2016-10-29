@@ -11,9 +11,11 @@
 #import "MFAddressBookDataExtractor.h"
 #import "MFAddressBookBuilder.h"
 #import "MFContactsModels.h"
+#import "MFAddressBookUpdate.h"
 
 @interface MFAddressBookContactsRoutine ()
 @property (nonatomic, strong) MFAddressBookBuilder *builder;
+@property (nonatomic, strong) MFAddressBookUpdate *update;
 @end
 
 @implementation MFAddressBookContactsRoutine
@@ -24,6 +26,7 @@
 {
     self = [super initWithAddressBookRefWrapper:wrapper];
     self.builder = [[MFAddressBookBuilder alloc] init];
+    self.update = [[MFAddressBookUpdate alloc] init];
     return self;
 }
 
@@ -57,14 +60,14 @@
     return nil;
 }
 
-- (UIImage *)imageWithIdentifier:(NSString *)identifier
+- (NSData *)imageWithIdentifier:(NSString *)identifier
 {
     if (self.wrapper.ref)
     {
         ABRecordID recordID = identifier.intValue;
         ABRecordRef recordRef = ABAddressBookGetPersonWithRecordID(self.wrapper.ref, recordID);
         MFContact* contact = [self.builder contactWithRecordRef:recordRef fieldMask:MFContactFieldPhoto];
-        return contact.photo;
+        return contact.imageData;
     }
     return nil;
 }
@@ -117,6 +120,54 @@
     }
     
     return (__bridge NSError*)err;
+}
+
+- (BOOL)updateContact:(nonnull MFContact *)contact{
+    
+    ABRecordID recordID = contact.identifier.intValue;
+    ABRecordRef recordRef = ABAddressBookGetPersonWithRecordID(self.wrapper.ref, recordID);
+#warning identifier
+    
+    [self.update updateContact:contact toContactRef:recordRef];
+    
+    CFErrorRef err = NULL;
+    if (ABAddressBookHasUnsavedChanges(self.wrapper.ref))
+    {
+        bool didset = ABAddressBookSave(self.wrapper.ref, &err);
+        if (didset && err == NULL) {
+            NSLog(@"added!");
+        } else {
+            NSLog(@"added failed!");
+        }
+    }
+    CFRelease(recordRef);
+    
+    return YES;
+}
+
+- (BOOL)updateContacts:(nonnull NSArray *)contacts{
+    
+    for (MFContact* contact in contacts) {
+        ABRecordID recordID = contact.identifier.intValue;
+        ABRecordRef recordRef = ABAddressBookGetPersonWithRecordID(self.wrapper.ref, recordID);
+#warning identifier
+        
+        [self.update updateContact:contact toContactRef:recordRef];
+        CFRelease(recordRef);
+    }
+    
+    CFErrorRef err = NULL;
+    if (ABAddressBookHasUnsavedChanges(self.wrapper.ref))
+    {
+        bool didset = ABAddressBookSave(self.wrapper.ref, &err);
+        if (didset && err == NULL) {
+            NSLog(@"added!");
+        } else {
+            NSLog(@"added failed!");
+        }
+    }
+    
+    return YES;
 }
 
 // remove contact

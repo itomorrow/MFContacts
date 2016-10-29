@@ -35,6 +35,6 @@
 - (NSArray *)arrayProperty:(ABPropertyID)property;
 - (NSDate *)dateProperty:(ABPropertyID)property;
 
-- (UIImage *)photo;
+- (NSData *)photo;
 
 @end
